@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("OpenWeather")]
-[assembly: AssemblyCopyright("Copyright ©  2017 Meshack Musundi")]
+[assembly: AssemblyCopyright("Copyright ©  2021 Campean Gheorghe")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

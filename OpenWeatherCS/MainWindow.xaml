@@ -28,9 +28,9 @@
 
         <!-- Forecast -->
         <Border Grid.Row="1" Background="{StaticResource PrimaryDarkBrush}">
-            <ItemsControl Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"
+            <ItemsControl Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left"
                           ItemTemplate="{DynamicResource ForecastDataTemplate}"
-                          ItemsSource="{Binding Forecast}">
+                          ItemsSource="{Binding Forecast}" Margin="10,10,10,66" Height="262" Width="986">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal"/>
@@ -53,8 +53,8 @@
                 </TextBox.InputBindings>
             </TextBox>
         </Border>
-        <Border Margin="0,312,0,-25" Grid.Row="1" Grid.RowSpan="2">
-            <Button Content="Save" HorizontalAlignment="Left" Height="87" Margin="366,0,0,0" VerticalAlignment="Top" Width="275" Click="Button_Click"/>
+        <Border Margin="0,0,0,-25" Grid.Row="2">
+            <Button Content="Save" HorizontalAlignment="Left" Height="87" Margin="366,0,0,0" VerticalAlignment="Top" Width="275" />
         </Border>
     </Grid>
 </controls:MetroWindow>    

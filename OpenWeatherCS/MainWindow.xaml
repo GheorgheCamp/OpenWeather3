@@ -10,14 +10,14 @@
                       xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
                       xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
                       mc:Ignorable="d"
-                      Width="1012" Height="582" 
+                      Width="1012" Height="648" 
                       Background="{StaticResource PrimaryMidBrush}" 
                       ResizeMode="NoResize" TitleCaps="False"
                       IconTemplate="{DynamicResource IconTemplate}"
                       d:DataContext="{d:DesignInstance Type=data:SampleWeatherViewModel, IsDesignTimeCreatable=True}"
                       DataContext="{Binding WeatherVM, Source={StaticResource ViewModelLocator}}">
 
-    <Grid FocusManager.FocusedElement="{Binding ElementName=LocationTextBox}" Margin="0,0,0,0">
+    <Grid FocusManager.FocusedElement="{Binding ElementName=LocationTextBox}" Margin="0,0,0,1">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -27,10 +27,10 @@
         <ctrls:CurrentWeatherControl/>
 
         <!-- Forecast -->
-        <Border Grid.Row="1" Background="{StaticResource PrimaryDarkBrush}">
+        <Border Grid.Row="1" Background="{StaticResource PrimaryDarkBrush}" Margin="0,0,0,145">
             <ItemsControl Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left"
                           ItemTemplate="{DynamicResource ForecastDataTemplate}"
-                          ItemsSource="{Binding Forecast}" Margin="10,10,10,66" Height="262" Width="986">
+                          ItemsSource="{Binding Forecast}" Margin="10,-3,0,0" Height="262" Width="986">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal"/>
@@ -40,8 +40,8 @@
         </Border>
 
         <!-- Location-->
-        <Border Grid.Row="2" Background="{StaticResource PrimaryDarkBrush}" Margin="0,0,0,-25">
-            <TextBox x:Name="LocationTextBox" SelectionBrush="{StaticResource PrimaryLightBrush}" Margin="-1,-56,15,0"
+        <Border Grid.Row="2" Background="{StaticResource PrimaryDarkBrush}">
+            <TextBox x:Name="LocationTextBox" SelectionBrush="{StaticResource PrimaryLightBrush}" Margin="6,-136,8,0"
                      VerticalAlignment="Top" controls:TextBoxHelper.Watermark="Type location &amp; press Enter"
                      VerticalContentAlignment="Center"
                      Text="{Binding Location, UpdateSourceTrigger=PropertyChanged}">
@@ -53,7 +53,15 @@
                 </TextBox.InputBindings>
             </TextBox>
         </Border>
-        <Border Margin="0,0,0,-25" Grid.Row="2">
+        <Border Grid.Row="1" RenderTransformOrigin="0.5,0.5" Margin="0,302,0,2">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.329"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
             <Button Content="Save" HorizontalAlignment="Left" Height="87" Margin="366,0,0,0" VerticalAlignment="Top" Width="275" />
         </Border>
     </Grid>

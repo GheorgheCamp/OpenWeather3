@@ -80,6 +80,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\RelayCommandAsync.cs" />
     <Compile Include="Controls\CurrentWeatherControl.xaml.cs">
       <DependentUpon>CurrentWeatherControl.xaml</DependentUpon>
     </Compile>
@@ -109,7 +110,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Commands\RelayCommandAsync.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
